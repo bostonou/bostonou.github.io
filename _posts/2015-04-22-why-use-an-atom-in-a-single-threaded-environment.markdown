@@ -1,6 +1,5 @@
 ---
 title: Why use an atom in a single-threaded environment?
-date: 2015-04-22 00:00:00
 ---
 The [Clojure docs for atoms][atoms] reference concepts like threads, atomic changes, and spin loops. Since those don't apply to a single-threaded environment, why would you ever use an atom?
 
