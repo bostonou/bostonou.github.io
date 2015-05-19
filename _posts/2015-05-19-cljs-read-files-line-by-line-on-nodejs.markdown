@@ -47,16 +47,16 @@ Lastly, we set up our file stream and pipe it through our transformer:
 
 {% highlight clojure %}
 (defn read-file-cb [file-name cb]
-  (let [line-reader (.Transform stream #js {:objectMode true})]
+  (let [line-reader (.Transform stream #js {:objectMode true})
+        source (.createReadStream fs file-name)]
     (set! (.-_transform line-reader) transform)
     (set! (.-_flush line-reader) flush)
-    (let [source (.createReadStream fs file-name)]
-      (.pipe source line-reader)
-      (.on line-reader "readable"
-           (fn []
-             (when-let [line (.read line-reader)]
-               (cb (str line)) ;;callback with each line
-               (recur)))))
+    (.pipe source line-reader)
+    (.on line-reader "readable"
+         (fn []
+           (when-let [line (.read line-reader)]
+             (cb (str line)) ;;callback with each line
+             (recur))))
     nil))
 {% endhighlight %}
 
@@ -64,18 +64,18 @@ I generally prefer using channels instead of passing around callbacks, so I actu
 
 {% highlight clojure %}
 (defn read-file-chan [file-name out-chan]
-  (let [line-reader (.Transform stream #js {:objectMode true})]
+  (let [line-reader (.Transform stream #js {:objectMode true})
+        source (.createReadStream fs file-name)]
     (set! (.-_transform line-reader) transform)
     (set! (.-_flush line-reader) flush)
-    (let [source (.createReadStream fs file-name)]
-      (.pipe source line-reader)
-      (.on line-reader "readable"
-           (fn []
-             (go
-               (loop []
-                 (when-let [line (.read line-reader)]
-                   (>! out-chan (str line)) ;;push line to chan
-                   (recur)))))))
+    (.pipe source line-reader)
+    (.on line-reader "readable"
+         (fn []
+           (go
+             (loop []
+               (when-let [line (.read line-reader)]
+                 (>! out-chan (str line)) ;;push line to chan
+                 (recur))))))
     nil))
 {% endhighlight %}
 
