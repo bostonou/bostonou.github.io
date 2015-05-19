@@ -20,3 +20,4 @@ defaults:
       layout: "post"
 
 permalink: /blog/:title.html
+
