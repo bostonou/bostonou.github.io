@@ -1,7 +1,7 @@
 ---
 title: CLJS - Read files line by line on NodeJS
 ---
-I'm working to port some clj to cljs and needed a cljs version of [`line-seq`][line-seq]. Having spent most of my cljs time in the browser, using NodeJS is a bit of a new world. There's almost certainly a package to read files line by line, but I decided to roll my on because:
+I'm working to port some clj to cljs and needed a cljs version of [`line-seq`][line-seq]. Having spent most of my cljs time in the browser, using NodeJS is a bit of a new world. There's almost certainly a package to read files line by line, but I decided to roll my own because:
 
 * It'd be good experience reading through NodeJS docs
 * I'd have to wrap some cljs anyway
@@ -23,7 +23,7 @@ As we read the file stream, we want to transform it from generic chunks of data 
 (defn- transform [chunk encoding done]
   (this-as this
     (let [data (if (.-_lastLineData this)
-                 (str (.-_lastLineData this) (str chunk))
+                 (str (.-_lastLineData this) chunk)
                  (str chunk))
           lines (clojure.string/split data (js/RegExp. eol "g"))]
       (set! (.-_lastLineData this) (last lines))
