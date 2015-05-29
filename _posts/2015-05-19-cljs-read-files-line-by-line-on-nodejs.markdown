@@ -79,11 +79,12 @@ I generally prefer using channels instead of passing around callbacks, so I actu
     nil))
 {% endhighlight %}
 
-This worked, but I really want the laziness of `line-seq` without the asynchronous code. In my next post, I'll implement `line-seq` to work just the way we want.
+This worked, but I really want the laziness of `line-seq` without the asynchronous code. In my [next post][next-post], I'll implement `line-seq` to work just the way we want.
 
 Here's a [gist of the full code][code].
 
 [line-seq]: http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/line-seq
 [post-on-streams]: https://strongloop.com/strongblog/practical-examples-of-the-new-node-js-streams-api/
 [core.async]: http://clojure.github.io/core.async/
+[next-post]: http://clojurescriptmadeeasy.com/blog/cljs-read-files-line-by-line-on-nodejs-part-2.html
 [code]: https://gist.github.com/bostonou/77ec1bfe8e4dbdd34fa3
