@@ -76,7 +76,7 @@ Now, we're where we want to be:
 
 {% highlight clojure %}
 (with-open [fd (.openSync fs "cljs-love.txt")]
-  (doseq [line (line-seq rdr)]
+  (doseq [line (line-seq fd)]
     (js/console.log line))) ;;do something with line
 {% endhighlight %}
 
@@ -85,7 +85,7 @@ And since we have a `seq`, we can use all of our normal tools:
 {% highlight clojure %}
 (with-open [fd (.openSync fs "cljs-love.txt")]
   ;;only return lines that contain "awesome"
-  (doseq [line (filter #(re-find #"awesome" %) (line-seq rdr))]
+  (doseq [line (filter #(re-find #"awesome" %) (line-seq fd))]
     (js/console.log line))) ;;nothing but awesome
 {% endhighlight %}
 
