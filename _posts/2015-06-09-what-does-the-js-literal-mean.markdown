@@ -50,7 +50,9 @@ cljs actually includes four built-in literals: `#inst`, `#js`, `#queue`, and `#u
 => (type (cljs.reader/read-string "#queue [1 2 3]"))
 cljs.core/PersistentQueue
 
-=> (UUID. "random-string-here")
+=> (UUID. "random-string-here") ;; cljs-version <= 0.0-3269
+#uuid "random-string-here"
+=> (uuid "random-string-here") ;; cljs-version >= 0.0-3308
 #uuid "random-string-here"
 => (type (reader/read-string "#uuid \"random-string-here\""))
 cljs.core/UUID
