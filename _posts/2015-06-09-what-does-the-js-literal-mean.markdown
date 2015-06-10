@@ -7,7 +7,7 @@ One of the best ways to up your cljs game is to read other people's code. When I
 First of all, `#js` is a *reader literal*. Reader literals are used by the cljs reader and can be used to read in a specific data type. Consider a javascript array:
 
 {% highlight clojure %}
-=> (require '(cljs.reader :as reader])
+=> (require '[cljs.reader :as reader])
 
 => (array 1 2 3)
 #js [1 2 3] ;;a javascript array
