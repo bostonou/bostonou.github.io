@@ -2,7 +2,7 @@
 title: Is there a canonical cljs reference?
 ---
 
-cljs is improving at a really great pace. Unfortunately, that means great blog posts can quickly go stale and leave out some new, useful functionality. Surely cljs would benefit from a nice, canonical reference that was a well-known starting point for aspiring (and always improving) cljs devs.
+cljs is improving at a really great pace. Unfortunately, that means great blog posts can quickly go stale and leave out some new, useful functionality. Surely cljs would benefit from a nice, official reference that was a well-known starting point for aspiring (and always improving) cljs devs.
 
 Thankfully, [Shaun Lebron][shaun-twitter] (and others) has started work on creating a great site for cljs, complete with useful, up-to-date documentation. Specifically, the [api-refs][api-refs] are already functional and useful for reference or simply exploring the functionality of cljs.
 
