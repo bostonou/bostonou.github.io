@@ -12,8 +12,10 @@ layout: default
     {{ content }}
     <h2>Recent Posts</h2>
     <ul>
-      {% for post in site.posts limit:5 %}
+      {% for post in site.posts limit:6 %}
+      {% if post.title != page.title %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
       {% endfor %}
     </ul>
     <script src="https://app.convertkit.com/landing_pages/2387.js"></script>
