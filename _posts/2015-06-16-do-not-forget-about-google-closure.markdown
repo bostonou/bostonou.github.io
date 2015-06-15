@@ -1,5 +1,5 @@
 ---
-title: Don't Forget About Google Closure
+title: Don't forget about Google Closure
 ---
 
 If you've spent much time with cljs, you probably know that cljs uses the Closure Compiler for code compilation. The Closure Compiler provides significant features such as dead code removal and minimization. (For more details, check out [Luke VanderHart's][luke-twitter] old but [relevant post][luke-post]. Also make sure to check out [Maria Neise's][mayaneise-twitter] awesome blog about her [cljs compiler work][mayaneise-blog] through Google's Summer of Code).
