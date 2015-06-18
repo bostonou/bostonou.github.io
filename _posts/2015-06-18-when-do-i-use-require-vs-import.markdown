@@ -61,6 +61,9 @@ One other point of confusion is Enums (e.g. [`goog.events.EventType`][event-type
   (:require [goog.events :as events]))
   (:import [goog.events EventType]))
 
+(def src ...)
+(defn callback [] ...)
+
 (events/listen! src EventType.CLICK callback) 
 {% endhighlight %}
 
