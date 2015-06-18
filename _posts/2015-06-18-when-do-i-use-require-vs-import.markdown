@@ -1,5 +1,5 @@
 ---
-title: When do I use :require or :import?
+title: When do I use :require vs :import?
 ---
 
 Following up my [last post on Google Closure][closure-post], I wanted to give some pointers on including the library in your code. When you include the lib, it's sometimes unclear when to use `:require` vs `:import`.
