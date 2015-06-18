@@ -67,7 +67,7 @@ One other point of confusion is Enums (e.g. [`goog.events.EventType`][event-type
 (events/listen! src EventType.CLICK callback) 
 {% endhighlight %}
 
-<del>I've seen enums used as `EventType.ACTION` and `EventType/ACTION`, and both appear to work. `EventType.ACTION` is used more frequently in my experience, but there doesn't seem to be an idiomatic version.</del> [David Nolen points out][twitter-correction] that EventType/ACTION is "incorrect" because / always means namespace in cljs. So EventType.Action is definitely what you want to use.
+<del>I've seen enums used as `EventType.ACTION` and `EventType/ACTION`, and both appear to work. `EventType.ACTION` is used more frequently in my experience, but there doesn't seem to be an idiomatic version.</del> [David Nolen points out][twitter-correction] that `EventType/ACTION` is incorrect because `/` always means namespace in cljs. So `EventType.Action` is definitely what you want to use.
 
 So here's your guideline: **use `:import` for Closure classes and enums, and use `:require` for everything else.**
 
