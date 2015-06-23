@@ -11,7 +11,7 @@ I've emphasized the two key points:
 1. The DOM is provides a structured representation of the document (e.g. HTML page)
 2. The nodes of the DOM can have event handlers attached to them
 
-Here's a simple example that shows a typical type of DOM interaction, using a cljs wrapper of jQuery:
+Here's a simple example that shows a typical type of DOM interaction, using a [cljs wrapper of jQuery][jayq]:
 
 {% highlight clojure %}
 (ns cljs-made-easy.core
@@ -47,5 +47,6 @@ _\* It's not about code structure, using jQuery vs Google Closure, etc. It's abo
 
 <script type="text/javascript" src="/js/jquery_toggle.js"></script>
 
+[jayq]: https://github.com/ibdknox/jayq
 [dom-defined]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 [html-spec]: http://www.w3.org/TR/html401/struct/global.html#h-7.5.2
