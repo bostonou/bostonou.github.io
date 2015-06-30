@@ -2,7 +2,7 @@
 title: How to humanize text - cl-format
 ---
 
-In the cljs slack channel (which [you should join][slack]), someone asked if there is a cljs library for humanizing text. I pointed them to a new (to cljs) feature that's already available via `cljs.pprint`: `cl-format`. (Note that this also applies to clj as it already supported pretty-printing).
+In the cljs slack channel (which [you should join][slack]), someone asked if there is a cljs library for humanizing text. I pointed them to a new (to cljs) feature that's already available via `cljs.pprint`: `cl-format`. (Note that this also applies to clj as it already supported pretty-printing thanks to [Tom Faulhaber][tom-twitter] et al).
 
 `cl-format` is a cljs version of Common Lisp's `FORMAT` function. It provides a ton of functionality, so much so that there's a [full pdf][pp-pdf] describing it. For a gentler, yet still expansive description, check out a [few FORMAT recipes][gigamonkeys].
 
@@ -84,3 +84,4 @@ cljs.user=> (capitalize-all "WeiRd cAsINg")
 [pp-pdf]: ftp://publications.ai.mit.edu/ai-publications/pdf/AIM-1102a.pdf
 [django]: https://docs.djangoproject.com/en/1.8/ref/contrib/humanize
 [hubspot]: https://github.com/HubSpot/humanize
+[tom-twitter]: https://twitter.com/tomfaulhaber
