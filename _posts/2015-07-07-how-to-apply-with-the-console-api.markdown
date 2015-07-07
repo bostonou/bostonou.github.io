@@ -22,7 +22,7 @@ This works with each of the [console methods (e.g. warn, error, etc.)][console-a
 
 *What follows is just some exploration; it isn't necessary to understand and (unfortunately) doesn't provide a solution. I used Chrome for this exploration.*
 
-When `apply` is called with a javascript function, you generally end up at this branch:
+When `apply` is called with a JavaScript function, you generally end up at this branch:
 
 {% highlight clojure %}
 (defn apply
