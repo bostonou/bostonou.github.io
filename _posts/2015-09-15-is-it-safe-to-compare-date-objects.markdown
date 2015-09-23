@@ -35,7 +35,7 @@ The ClojureScript equality check we care about is:
     (if (nil? x)
       (nil? y)
       (or (identical? x y)
-        ^boolean (-equiv x y))))
+        ^boolean (-equiv x y)))))
 {% endhighlight %}
 
 Date objects implement the `IEquiv` protocol, which is where we can find the implementation of `-equiv`. (Side note: the `-` at the start of the function name is a signal that this is a protocol method.) When we compare Date objects, we're calling `-equiv`:
@@ -45,7 +45,7 @@ Date objects implement the `IEquiv` protocol, which is where we can find the imp
   IEquiv
   (-equiv [o other]
     (and (instance? js/Date other)
-         (== (.valueOf o) (.valueOf other))))
+         (== (.valueOf o) (.valueOf other)))))
 {% endhighlight %}
 
 We can see that, in the end, we're comparing values via `.valueOf`.
