@@ -83,7 +83,7 @@ If you want order with sets, simply turn it into a `seq` first. Calling `seq` on
 cljs.user=> (seq #{2 3 1}) ;;not sure what the order will be
 (1 3 2) ;;it will always be this order
 
-cljs.user=> (nth (seq #{2 3 1} 0))
+cljs.user=> (nth (seq #{2 3 1}) 0)
 1
 {% endhighlight %}
 
