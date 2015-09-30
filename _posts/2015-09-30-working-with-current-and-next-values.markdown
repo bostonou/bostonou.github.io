@@ -20,7 +20,7 @@ Generally, you end up with something like this:
 }
 {% endhighlight %}
 
-Whether you use a `for(var i=0; i < arr.length; i++)` or something like [`array.reduce`][array-reduce], you end up having to make sure your index is valid and doesn't reach outside of the array. We know the code is funky because we inevitably end up adding a comment that says something like `start with the second one` or `stop at length - 1`.
+Whether you use a `for(var i=0; i < arr.length; i++)` or something like [`array.reduce`][array-reduce], you end up having to make sure your index is valid and doesn't reach outside of the array. **We intuitively know the code is brittle and not obvious** because we inevitably end up adding a comment that says something like `start with the second one` or `stop at length - 1`.
 
 In cljs, there's a handy-dandy function called [`partition`][partition] that elegantly solves this problem for us.
 
