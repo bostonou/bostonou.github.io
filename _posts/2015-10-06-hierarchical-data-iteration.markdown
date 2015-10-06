@@ -49,7 +49,7 @@ The most basic useful step is searching a sequence of step-templates for the id.
   (first (filter (fn [step] (= step-id (:_id step))) steps)))
 {% endhighlight %}
 
-This says "`filter` out `steps` that don't have `:_id` equal to `step-id`. Also, I only want the `first` one."
+This says "`filter` the sequence so we only have `steps` with `:_id` equal to `step-id`. Also, I only want the `first` one."
 
 * We only expect there to be one step that matches, so we just want the `first` match.
 * `filter` is lazy, meaning that after we get our first step, the code won't keep filtering.
