@@ -4,7 +4,7 @@ title: JS to CLJS - Hierarchical Data Iteration
 
 > From time to time I'll see a post on JavaScript and take some time to work it out in ClojureScript. This hopefully will take away some of the Magic&#8482; from functional programming and show how to solve real problems. I promise you won't have to learn what a monad is.
 
-[Derick Bailey][derick-twitter] walks through [iterating through heirarchical data][site-post] and uses [Generators][generators] to help clean up the code. This feels like a great example to show the simplicity of cljs.
+[Derick Bailey][derick-twitter] walks through [iterating through heirarchical data][site-post] and uses [Generators][generators] to help clean up the code. His example is a great example to show the simplicity of cljs.
 
 ### Problem
 
