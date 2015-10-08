@@ -96,8 +96,6 @@ And that's it! You now have the JVM and Leiningen installed, know how to set up 
 
 Feel free to [hit me up on twitter][pote-twitter] if there are any corrections or clarifications that need to be made to this tutorial.
 
-*Find this post useful? Please share the love on [Hacker News][hn].*
-
 [vim-fireplace]: https://github.com/tpope/vim-fireplace
 [vim-sexp]: https://github.com/guns/vim-sexp
 [cursive]: https://cursiveclojure.com/
