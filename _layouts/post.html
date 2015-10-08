@@ -26,3 +26,11 @@ layout: default
   </article>
 
 </div>
+
+<script type="text/javascript">
+  $(function(){
+    $('#ck_subscribe_form').on('submit',function(){
+      ga('send', 'event', 'Newsletter', 'signup', 'cljs-real-world');
+    });
+  });
+</script>
