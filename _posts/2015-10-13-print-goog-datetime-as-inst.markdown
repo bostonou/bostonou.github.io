@@ -4,7 +4,7 @@ title: How to print goog.DateTime as &#35;inst
 
 For a recent problem, I was working with `goog.DateTime` objects and needed to send them along in JSON, specifically as `#inst`.
 
-The [docs for `goog.DateTime`][goog-docs] say they can be used interchangeably with native js `Date` objects, but a quick check shows that cljs doesn't automatically do what I want:
+The [docs for `goog.DateTime`][goog-docs] say we can use them interchangeably with native js `Date` objects, but a quick check shows that cljs doesn't automatically do what we want:
 
 {% highlight clojure %}
 cljs.user=> (pr-str (js/Date. "October 13, 2015"))
@@ -15,7 +15,7 @@ cljs.user=> (pr-str (DateTime. (js/Date. "October 13, 2015")))
 
 There are several ways to do this (e.g. convert the `DateTimes` to native `Date` objects), but really I just want `DateTime` objects to print like `Date` objects without having to think about it.
 
-Here's the implementation for printing native js `Date`:
+Here's the [implementation for printing native `js/Date`][implementation]:
 
 {% highlight clojure %}
 (defn- pr-writer-impl
@@ -91,7 +91,12 @@ cljs.user=> (clj->js {:date (DateTime. (js/Date. "October 13, 2015"))})
 
 ### Take-aways
 
-This was pretty nice to handle and a good exploration of cljs. Via `extend-type` and `IPrintWithWriter`, we can simply control how various objects are printed. Even more generally, we can use `extend-type` and any protocol to add functionality to types/objects, without needing to break them open.
+With `extend-type` and [`IPrintWithWriter`][iprintwithwriter], we can simply control how various objects are printed. Even more generally, we can use `extend-type` and any protocol to add functionality to types/objects, without needing to break them open.
 
+If we only cared about JSON, we could use [`IEncodeJS`][iencodejs] in a similar way. It's useful to have consistent printable dates (e.g. for debugging) so `IPrintWithWriter` is worth using here.
+
+[implementation]: https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/core.cljs#L8772-L8847
 [goog-docs]: https://google.github.io/closure-library/api/class_goog_date_DateTime.html
 [extend-type]: http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/extend-type
+[iprintwithwriter]: https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/core.cljs#L619-L625
+[iencodejs]: https://github.com/clojure/clojurescript/blob/r1.7.48/src/main/cljs/cljs/core.cljs#L9271-L9274
