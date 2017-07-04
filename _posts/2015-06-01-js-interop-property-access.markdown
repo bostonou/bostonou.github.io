@@ -25,6 +25,7 @@ Example from the [cljs api][cljs api]:
 (goog.object/set obj "foo" "bar")
 obj
 ;;=> #js {:foo "bar"}
+ 
 {% endhighlight %}
 
 See [CLJS-2148][cljs-2148] and [CLJS-2149][cljs-2149] for more details.
@@ -38,6 +39,7 @@ See [CLJS-2148][cljs-2148] and [CLJS-2149][cljs-2149] for more details.
 {% highlight clojure %}
 (.-property obj) ;;get property
 (set! (.-property obj) v) ;;set property
+ 
 {% endhighlight %}
 
 In the normal case, you'll want to use `.-property` to access js properties. In the [line-reader example][line-reader], we use `.-_lastLineData` to get/set data on `this`.
@@ -62,6 +64,7 @@ Using `.-property` allows the compiler to rename the property during advanced co
 {% highlight clojure %}
 (aget obj "property") ;;get property
 (aset obj "property" v) ;;set property
+ 
 {% endhighlight %}
 
 If you want your code to be accessible in js, use `aget`/`aset` with strings referring to the property.
