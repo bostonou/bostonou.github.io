@@ -38,7 +38,7 @@ See [CLJS-2148][cljs-2148] and [CLJS-2149][cljs-2149] for more details.
 <br />
 <br />
 
-## **Outdated**
+## **The rest of this post is now outdated**
 
 [Konrad Garus][reference-post] has a good post explaining the details of accessing js properties from cljs. It's worth your time to read the entire post, but here are some general guidelines.
 
