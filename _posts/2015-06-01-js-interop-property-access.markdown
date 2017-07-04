@@ -2,6 +2,35 @@
 title: JS interop - property access
 ---
 
+## Update - July 4, 2017
+
+**This post is now outdated**. Instead use [`goog.object/get`, `goog.object/getValueByKeys`, and `goog.object/set`][goog object].
+
+Example from the [cljs api][cljs api]:
+
+{% highlight clojure %}
+;;instead of aget
+(require 'goog.object)
+(def obj #js {:foo #js {:bar 2}})
+
+(goog.object/get obj "foo")
+;;=> #js {:bar 2} 
+
+(goog.object/getValueByKeys obj "foo" "bar")
+;;=> 2
+
+;;instead of aset
+(def obj #js {:foo 1})
+
+(goog.object/set obj "foo" "bar")
+obj
+;;=> #js {:foo "bar"}
+{% endhighlight %}
+
+See [CLJS-2148][cljs-2148] and [CLJS-2149][cljs-2149] for more details.
+
+---
+
 [Konrad Garus][reference-post] has a good post explaining the details of accessing js properties from cljs. It's worth your time to read the entire post, but here are some general guidelines.
 
 ## Use `.-property` for cljs
@@ -46,7 +75,8 @@ If you want your code to be accessible in js, use `aget`/`aset` with strings ref
 (set! (.-name new-user) "boston 2.0")
 
 ;;js, doesn't work as `name` could be renamed by the compiler
-;;new-user.name == "boston 2.0"; ;;false
+;;new-user.name == "boston 2.0"; ;;=> false
+ 
 {% endhighlight %}
 
 ## Don't mix accessors
@@ -55,3 +85,7 @@ If you sometimes use `(.-property object)` and other times use `(aget object "pr
 
 [reference-post]: http://squirrel.pl/blog/2013/03/28/two-ways-to-access-properties-in-clojurescript/
 [line-reader]: http://clojurescriptmadeeasy.com/blog/cljs-read-files-line-by-line-on-nodejs.html
+[goog object]: https://google.github.io/closure-library/api/goog.object.html
+[cljs api]: https://cljs.github.io/api/cljs.core/aget
+[cljs-2148]: https://dev.clojure.org/jira/browse/CLJS-2148
+[cljs-2149]: https://dev.clojure.org/jira/browse/CLJS-2149
