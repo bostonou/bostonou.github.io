@@ -4,7 +4,7 @@ title: JS interop - property access
 
 ## Update - July 4, 2017
 
-**This post is now outdated**. Instead use [`goog.object/get`, `goog.object/getValueByKeys`, and `goog.object/set`][goog object].
+**The original post is now outdated**. Instead use [`goog.object/get`, `goog.object/getValueByKeys`, and `goog.object/set`][goog object].
 
 Example from the [cljs api][cljs api]:
 
@@ -30,7 +30,15 @@ obj
 
 See [CLJS-2148][cljs-2148] and [CLJS-2149][cljs-2149] for more details.
 
+<br />
+<br />
+
 ---
+
+<br />
+<br />
+
+## **Outdated**
 
 [Konrad Garus][reference-post] has a good post explaining the details of accessing js properties from cljs. It's worth your time to read the entire post, but here are some general guidelines.
 
