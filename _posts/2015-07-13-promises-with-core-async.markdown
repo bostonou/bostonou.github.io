@@ -28,17 +28,17 @@ With `core.async` `go` blocks, we can run code concurrently:
   ;;go blocks return core.async channels; the last value of the
   ;; go block is the value put to the channel
   (go
-    (pr (str key " starting"))))
+    (prn (str key " starting"))
     (<! (a/timeout t))
-    (pr (str key " finished"))))
+    (prn (str key " finished"))
     ;;our last value is our resolved value
     (str key " waited " t "ms")))
 
 (let [promise-1 (resolving-promise :promise-1 2000)
       promise-2 (resolving-promise :promise-2 1000)]
   (go
-    (pr (<! promise-1))
-    (pr (<! promise-2))))
+    (prn (<! promise-1))
+    (prn (<! promise-2))))
 
 ;;Output =>
 ;; ":promise-1 starting"
@@ -73,13 +73,13 @@ To reject immediately, we need to combine two concepts. First, we provide a chan
 {% highlight clojure %}
 (defn resolving-promise [key t reject]
   (go
-    (pr (str key " starting"))
+    (prn (str key " starting"))
     (<! (a/timeout t))
     (str key " waited " t "ms")))
 
 (defn rejecting-promise [key t reject]
   (go
-    (pr (str key " starting"))
+    (prn (str key " starting"))
     (<! (a/timeout t))
     (>! reject (str key " had an error after " t "ms"))
     "This string won't be used"))
@@ -93,8 +93,8 @@ Now, we need to get either the list of resolved values or the rejected value, wh
       (let [all-chans (apply into [] chans)
             [v ch] (a/alts! [reject all-chans])]
         (if (= ch reject)
-          (pr (str "Rejected value: " v))
-          (pr (str "Resolved values: " v)))))
+          (prn (str "Rejected value: " v))
+          (prn (str "Resolved values: " v)))))
 {% endhighlight %}
 
 We take our reject channel and list of channels (i.e. promises) and combine our channels using our `into` fn. Then, we wait on either the reject value or the resolved values via `alts!`. If the first value to come back is via the reject channel, we go into our rejection code. Otherwise, we have our ordered list of resolved values and handle them appropriately.
