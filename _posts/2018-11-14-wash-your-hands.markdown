@@ -159,4 +159,4 @@ I can knock this out in one sitting. Depending on feedback, could extend for a f
 [rich]: https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/HammockDrivenDev-mostly-text.md
 [calp]: https://twitter.com/_calebp
 [jackm]: https://twitter.com/jack_mocherman
-[joek]: github.com/josephkane
+[joek]: https://github.com/josephkane
