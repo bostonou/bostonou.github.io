@@ -151,7 +151,7 @@ It's just a blog so the price of failure is small.
 
 I can knock this out in one sitting. Depending on feedback, could extend for a few days.
 
-*Thanks to [Tim Pote][timp], [Caleb Phillips][calp]), [Jack Mocherman][jackm], and [Joe Kane][joek] for reading rough drafts and providing valuable feedback.*
+*Thanks to [Tim Pote][timp], [Caleb Phillips][calp], [Jack Mocherman][jackm], and [Joe Kane][joek] for reading rough drafts and providing valuable feedback.*
 
 [sethg]: https://tim.blog/2018/11/05/the-tim-ferriss-show-transcripts-seth-godin/
 [hand-scrub]: https://www.infectioncontroltoday.com/hand-hygiene/how-perform-surgical-hand-scrubs
