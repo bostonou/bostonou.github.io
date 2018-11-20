@@ -1,0 +1,47 @@
+---
+title: JS to CLJS &#35;1
+---
+
+> I'll regularly take a JavaScript problem and work it out in ClojureScript. This will hopefully take away some of the Magic&#8482; of functional programming and show how to solve real problems. I promise you won't have to learn what a monad is.
+
+### Problem
+
+**Write a function that accepts a string and returns the same string with alternate casing.**
+
+{% highlight clojure %}
+cljs.user => (multi-case "Your String")
+=> "yOuR StRiNg"
+{% endhighlight %}
+
+This problem came up in a JavaScript slack group. Several JS solutions were given, with most differences being insignificant.
+
+### Solutions
+
+{% highlight javascript %}
+//#js
+//one of many similar solutions
+const multiCase = string => {
+  return string
+    .split("")
+    .map((char, index) => index % 2 ? char.toLowerCase() : char.toUpperCase())
+    .join("")
+}
+{% endhighlight %}
+
+{% highlight clojure %}
+;;#cljs
+(defn multi-case [s]
+  (apply str
+   (map (fn [f c]
+         (f c))
+        (cycle [clojure.string/lower-case
+                clojure.string/upper-case])
+        s))
+{% endhighlight %}
+
+### Comparative Thoughts
+
+* Both versions map over each character without counting the number of characters.
+* The cljs version doesn't use the index to determine which function to apply.
+* The cljs version will be simpler to extend, e.g. replace every third char with a space. (In the cljs case, we just add the function to the end of the `cycle`d vector. In js, we'd need to add another branch to our `index` check.)
+* The cljs version gives us functions as first class, i.e. we can use the string functions as arguments. In js, we have `toLowerCase` and `toUpperCase` that can only be applied to string instances. If we want to pass them as arguments, we have to wrap them as functions or perform some other workaround.
