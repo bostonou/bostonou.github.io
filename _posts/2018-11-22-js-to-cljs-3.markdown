@@ -1,0 +1,68 @@
+---
+title: JS to CLJS &#35; 3
+---
+
+> I'll regularly take a JavaScript problem and work it out in ClojureScript. This will hopefully take away some of the Magic&#8482; of functional programming and show how to solve real problems. I promise you won't have to learn what a monad is.
+
+### Problem
+
+Write a function that takes a list of pairs and classifies them as valid or invalid. Pairs are valid if the age is over 35 and the signature is true.
+
+Example input:
+
+{% highlight javascript %}
+[[18, true],[45, true],[61, false],[37, false],[21, false],[78, true]]
+{% endhighlight %}
+
+For example:
+
+{% highlight javascript %}
+valid([[18, true],[45, true],[61, false],[37, false],[21, false],[78, true]]) ===
+  ["Invalid", "Valid", "Invalid", "Invalid", "Invalid", "Valid"]
+{% endhighlight %}
+
+### Solutions
+
+{% highlight clojure %}
+;;#cljs
+(defn valid? [data]
+  (map (fn [[age signed?]]
+         (if (and (> age 35) signed?)
+           "Valid"
+           "Invalid"))
+       data))
+{% endhighlight %}
+
+### Thoughts
+
+Mostly straightforward:
+
+* We destructure each `age`/`signed?` pair. Such destructuring is a normal occurrence.
+* We return a lazy sequence via `map`. We could do something like "get the first three 'Valid'" and the calculations would stop as soon as we found them.
+
+This is clearly a tutorial type problem, but I suggest getting into the habit of using more descriptive data structures:
+
+{% highlight clojure %}
+;;#cljs
+(defn valid? [data]
+  (map (fn [{:keys [:age :signed?] :as person}]
+         (if (and (> age 35) signed?)
+           (assoc person :valid? true)
+           (assoc person :valid? false)))
+       data))
+
+(valid? [{:age 18 :signed? true}
+         {:age 45 :signed? true}
+         {:age 61 :signed? false}
+         {:age 37 :signed? false}
+         {:age 21 :signed? false}
+         {:age 78 :signed? true}])
+=> ({:age 18 :signed? true :valid? false}
+    {:age 45 :signed? true :valid? true}
+    {:age 61 :signed? false :valid? false}
+    {:age 37 :signed? false :valid? false}
+    {:age 21 :signed? false :valid? false}
+    {:age 78 :signed? true :valid? true})
+{% endhighlight %}
+
+I'm partially anticipating that this function will be part of a larger data-flow, so the return is transformed data instead of just the `valid?` data apart from the context.
