@@ -46,9 +46,7 @@ This is clearly a tutorial type problem, but I suggest getting into the habit of
 ;;#cljs
 (defn valid? [data]
   (map (fn [{:keys [:age :signed?] :as person}]
-         (if (and (> age 35) signed?)
-           (assoc person :valid? true)
-           (assoc person :valid? false)))
+         (assoc person :valid? (and (> age 35) signed?)))
        data))
 
 (valid? [{:age 18 :signed? true}
