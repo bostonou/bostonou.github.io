@@ -1,0 +1,52 @@
+---
+title: JS to CLJS &#35; 4
+---
+
+> I'll regularly take a JavaScript problem and work it out in ClojureScript. This will hopefully take away some of the Magic&#8482; of functional programming and show how to solve real problems. I promise you won't have to learn what a monad is.
+
+### Problem
+
+Write a function that takes an array of consecutive (increasing) letters as input and returns the missing letter.
+
+* You will always get an valid array.
+* The array will be always exactly one letter be missing.
+* The length of the array will always be at least 2.
+* The array will always contain letters in only one case.
+
+
+{% highlight javascript %}
+findMissingLetter(['a','b','c','d','f']) === 'e';
+findMissingLetter(['O','Q','R','S']) === 'P';
+{% endhighlight %}
+
+### Solution
+
+{% highlight clojure %}
+;;#cljs
+(defn missing-letter [letters]
+  (first
+   (keep
+    (fn [[a b]]
+     (let [next-char-code (inc (.charCodeAt a 0))]
+       (if (not= next-char-code (.charCodeAt b 0))
+        (js/String.fromCharCode next-char-code))))
+    (partition 2 1 letters))))
+{% endhighlight %}
+
+### Thoughts
+
+The main breakthrough is realizing that the fundamental problem is comparing one character to the next character. [A nice cljs trick][trick] is to use [`partition`][partition] to get the data structure that better represents our problem:
+
+{% highlight clojure%}
+cljs.user=> (partition 2 1 ["a" "b" "c" "d" "f"])
+=> (("a" "b") ("b" "c") ("c" "d") ("d" "f"))
+{% endhighlight %}
+
+1. With our problem-aligned data structure, we work our way through the list, comparing the character code of the first letter to that of the second.
+2. If the characters are in order, we return `nil`.
+3. If we've found our missing letter, we return it.
+4. `keep` returns a sequence of all non-nil values, so the value of `keep` will be the sequence of missing letters.
+5. Since the problem states there will only be one missing letter, we return the `first` one (`keep` is lazy; when we find our first value, cljs will stop processing the rest of the list).
+
+[trick]: http://clojurescriptmadeeasy.com/blog/working-with-current-and-next-values.html
+[partition]: https://cljs.github.io/api/cljs.core/partition
