@@ -37,7 +37,7 @@ In a world of JavaScript Fatigue and constant rewrites from the ground up, Cloju
 At some point, developers get tired of spinning our wheels learning "new" things that are just different packaging over the same principles. It's part of the reason that, on average, [the most experienced JavaScript developers choose ClojureScript][js-experience]. After learning dozens of libraries and frameworks that all have their own spin on the same thing, you begin to value a stable foundation that simply lets you get stuff done.
 
 ---
-
+<br />
 As professionals, we are obligated to make decisions based on the needs of our customers and stakeholders. When it comes to explaining ClojureScript and the risk of ending up with a dead language, we have a very good story to show it's a low risk decision.
 
 [scar-comment]: https://hackernoon.com/functional-programming-in-javascript-is-an-antipattern-58526819f21e
