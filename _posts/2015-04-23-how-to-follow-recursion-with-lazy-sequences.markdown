@@ -1,5 +1,6 @@
 ---
 title: How to follow recursion with lazy sequences
+tags: how-to language-learning
 ---
 Recursion is often the most difficult programming concept to become comfortable with. Add laziness and it can make it hard to even understand what's going on. Stepping through examples is great practice for really grasping these fundamental concepts.
 

@@ -1,5 +1,6 @@
 ---
 title: How to `apply` with the console api
+tags: language-learning how-to interop
 ---
 
 Over in the [cljs slack channel][slack], a question came up about using `apply` with `js/console.log`.

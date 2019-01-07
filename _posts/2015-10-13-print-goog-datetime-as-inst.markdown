@@ -1,5 +1,6 @@
 ---
 title: How to print goog.DateTime as &#35;inst
+tags: interop how-to language-learning
 ---
 
 For a recent problem, I was working with `goog.DateTime` objects and needed to send them along in JSON, specifically as `#inst`.

@@ -1,5 +1,6 @@
 ---
 title: How to use `this` in CLJS
+tags: how-to language-learning interop
 ---
 
 Occasionally, you have to break out of your normal cljs/FP flow and access whatever object [`this`][msdn-this] refers to. In most cases, you'll need to do so because:

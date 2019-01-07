@@ -1,5 +1,6 @@
 ---
 title: JS to CLJS &#35; 4
+tags: language-learning
 ---
 
 > I'll regularly take a JavaScript problem and work it out in ClojureScript. This will hopefully take away some of the Magic&#8482; of functional programming and show how to solve real problems. I promise you won't have to learn what a monad is.

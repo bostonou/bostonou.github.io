@@ -1,5 +1,6 @@
 ---
 title: CLJS - Read files line by line on NodeJS Part 2
+tags: how-to language-learning
 ---
 
 > Note: There are a number of things that may be unfamiliar to new cljs devs. Rather than making this a huge post, I'll write a separate post for each concept. For example, if the `lazy-cat` used in this post is unclear, check out [my explanation of lazy-seq and recursion][laziness-post].

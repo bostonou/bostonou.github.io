@@ -1,5 +1,6 @@
 ---
 title: Understanding the DOM, Part 1
+tags: language-learning design
 ---
 
 The DOM (pronounced like "Mom" or "Dome" depending on who you talk to) is one of the basic building blocks to understand when it comes to web development. [Mozilla provides a good definition][dom-defined]:

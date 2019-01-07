@@ -1,5 +1,6 @@
 ---
 title: Guest Post - Beginning Clojure&#58;  Cursive
+tags: how-to language-learning
 ---
 > This post is from my friend and colleague [Tim Pote][pote-twitter]. He's a really smart guy and wrote up a tutorial on getting started with Clojure and IntelliJ/Cursive. Graciously, he's allowed me to cross post it here. I'm currently pushing him to write more about Clojure on [his blog][his-blog].
 

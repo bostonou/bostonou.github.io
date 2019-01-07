@@ -1,5 +1,6 @@
 ---
 title: Ruby Got It Right; We Get It Wrong
+tags: design evaluation
 ---
 
 > "For me, the purpose of life is, at least partly, to have joy. Programmers often feel joy when they can concentrate on the creative side of programming, so **Ruby is designed to make programmers happy**." - [Yukihiro Matsumoto][yuki-quote]

@@ -1,5 +1,6 @@
 ---
 title: Current and Next Values of a List
+tags: how-to cljs-value language-learning
 ---
 
 Here's a fairly common situation:

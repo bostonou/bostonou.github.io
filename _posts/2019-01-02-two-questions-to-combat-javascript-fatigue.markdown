@@ -1,5 +1,6 @@
 ---
 title: Two Questions to Combat JavaScript Fatigue
+tags: evaluation hiring-career
 ---
 
 How do you think the average developer would feel if they were given the following technologies to learn?

@@ -1,5 +1,6 @@
 ---
 title: Wash Your Hands
+tags: design hiring-career
 ---
 
 I was listening to an [interview with Seth Goden][sethg] where he discussed what it means to be a professional. The example he used was surgeons preparing for surgery. Surgeons are expected to scrub their hands every time before surgery. Part of being a professional surgeon is going through the hand washing procedure.

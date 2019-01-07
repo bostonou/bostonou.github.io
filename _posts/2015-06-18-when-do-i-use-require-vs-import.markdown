@@ -1,5 +1,6 @@
 ---
 title: When do I use :require vs :import?
+tags: language-learning interop how-to
 ---
 
 Following up my [last post on Google Closure][closure-post], I wanted to give some pointers on including the library in your code. When you include the lib, it's sometimes unclear when to use `:require` vs `:import`.

@@ -1,5 +1,6 @@
 ---
 title: How to make remote calls in CLJS
+tags: how-to language-learning
 ---
 <script type="text/javascript" src="/js/remote_call.js"></script>
 

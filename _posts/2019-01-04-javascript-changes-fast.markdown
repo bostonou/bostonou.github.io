@@ -1,5 +1,6 @@
 ---
 title: JS Changes Fast; CLJS Makes It Manageable
+tags: cljs-value stability evaluation developer-time
 ---
 
 I wrote my first JavaScript somewhere around 15 years ago and switched almost exclusively to ClojureScript several years ago. JavaScript as a language has changed so much that, if you drop me in any modern js codebase, it's probably 50/50 that I could actually read it without referencing google.

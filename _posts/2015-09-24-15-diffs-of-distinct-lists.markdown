@@ -1,5 +1,6 @@
 ---
 title: How to get the (distinct) difference between two lists
+tags: language-learning how-to cljs-value
 ---
 
 From time to time I'll see a post on JavaScript and take some time to work it out in ClojureScript. This helps me in a few ways:

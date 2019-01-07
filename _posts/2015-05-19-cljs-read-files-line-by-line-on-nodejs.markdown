@@ -1,5 +1,6 @@
 ---
 title: CLJS - Read files line by line on NodeJS
+tags: how-to language-learning
 ---
 I'm working to port some clj to cljs and needed a cljs version of [`line-seq`][line-seq]. Having spent most of my cljs time in the browser, using NodeJS is a bit of a new world. There's almost certainly a package to read files line by line, but I decided to roll my own because:
 

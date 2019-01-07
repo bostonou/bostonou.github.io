@@ -1,5 +1,6 @@
 ---
 title: Cleaning up old code with :deprecated
+tags: how-to language-learning
 ---
 
 For any long-lived application, there comes a time when code needs to be refactored. It's often the case that we don't have the time or energy to do so right then, so we're left with a few options. We can either add a comment, update a few doc strings, or rename functions to `bad-idea-do-not-use-anymore`.

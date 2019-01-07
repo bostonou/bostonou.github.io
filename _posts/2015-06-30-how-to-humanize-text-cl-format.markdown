@@ -1,5 +1,6 @@
 ---
 title: How to humanize text - cl-format
+tags: language-learning cljs-value how-to
 ---
 
 In the cljs slack channel (which [you should join][slack]), someone asked if there is a cljs library for humanizing text. I pointed them to a new (to cljs) feature that's already available via `cljs.pprint`: `cl-format`. (Note that this also applies to clj as it already supported pretty-printing thanks to [Tom Faulhaber][tom-twitter] et al).

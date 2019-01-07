@@ -1,5 +1,6 @@
 ---
 title: ClojureScript Is Not CoffeeScript
+tags: stability evaluation
 ---
 
 >  A lot of people have the scars of switching over to CoffeeScript and then finding they had a codebase in an obscure language which had been abandoned by the hipsters. - [A scarred JavaScript Developer][scar-comment]

@@ -1,5 +1,6 @@
 ---
 title: JS interop - property access
+tags: how-to language-learning interop
 ---
 
 ## Update - July 4, 2017

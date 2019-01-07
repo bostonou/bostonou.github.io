@@ -1,5 +1,6 @@
 ---
 title: Checking out CLJSJS Packages
+tags: how-to language-learning
 ---
 
 If you've ever wanted to include a JS lib in your cljs projects, you know there are several steps involved:

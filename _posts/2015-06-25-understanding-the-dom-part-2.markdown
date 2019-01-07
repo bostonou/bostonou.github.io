@@ -1,5 +1,6 @@
 ---
 title: Understanding the DOM, Part 2
+tags: language-learning design
 ---
 
 In the [last post][last-post], we left off with a question. What's wrong with this code?

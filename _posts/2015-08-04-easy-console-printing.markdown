@@ -1,5 +1,6 @@
 ---
 title: Easy console printing
+tags: how-to interop language-learning
 ---
 
 If part of your development process includes logging to the console and you get tired of writing `(js/console.log ...)`, consider using `enable-console-print!`.

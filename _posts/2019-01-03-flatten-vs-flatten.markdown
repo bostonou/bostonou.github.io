@@ -1,5 +1,6 @@
 ---
 title: Flatten vs. Flatten&#58; An Example In Incidental Complexity
+tags: api evaluation cljs-value
 ---
 
 *This is not a post to bash JavaScript, library authors, or those of us who use and enjoy JavaScript. It's an attempt to step back and take an honest look at what can be better. Thanks to all who have put in significant time and effort to build the tools I often take for granted.*

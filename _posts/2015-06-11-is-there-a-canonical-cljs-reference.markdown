@@ -1,5 +1,6 @@
 ---
 title: Is there a canonical cljs reference?
+tags: language-learning
 ---
 
 cljs is improving at a really great pace. Unfortunately, that means great blog posts can quickly go stale and leave out some new, useful functionality. Surely cljs would benefit from a nice, official reference that was a well-known starting point for aspiring (and always improving) cljs devs.

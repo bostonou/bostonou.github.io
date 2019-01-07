@@ -1,5 +1,6 @@
 ---
 title: Is it safe to compare Date objects?
+tags: interop langage-learning cljs-value
 ---
 
 In JavaScript, comparing Date objects provides numerous opportunities for bugs:

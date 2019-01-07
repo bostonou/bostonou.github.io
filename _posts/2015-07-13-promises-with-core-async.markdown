@@ -1,5 +1,6 @@
 ---
 title: Promises with core.async
+tags: how-to cljs-value language-learning
 ---
 
 > Is there a `core.async` equivalent to `Promise.all`?

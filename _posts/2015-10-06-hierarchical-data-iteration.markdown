@@ -1,5 +1,6 @@
 ---
 title: JS to CLJS - Hierarchical Data Iteration
+tags: cljs-value how-to language-learning
 ---
 
 > From time to time I'll see a post on JavaScript and take some time to work it out in ClojureScript. This hopefully will take away some of the Magic&#8482; from functional programming and show how to solve real problems. I promise you won't have to learn what a monad is.

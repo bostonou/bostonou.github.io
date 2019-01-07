@@ -1,5 +1,6 @@
 ---
 title: My Worst and Best Code of 2018
+tags: evaluation hiring-career design
 ---
 
 ## The Worst
