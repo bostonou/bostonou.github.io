@@ -42,7 +42,7 @@ layout: default
 
         {% if sameTagCount >= minCommonTags %}
           <div>
-          <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{ commonTags }}</a></p>
+          <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
           </div>
           {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
           {% if maxRelatedCounter >= maxRelated %}
