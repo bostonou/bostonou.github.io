@@ -9,7 +9,7 @@ Of course any person would choose a developer that could write code in one hour 
 
 ![misconceptions](/resources/misconceptions.png)
 
-This diagram by Rich Hickey, [from his talk *Effective Programs*](effective-programs), really gets to the point. The bottom levels of problems are generally solved by developers who are thinking about code. The top level of problems can't be solved by even the cleanest, fastest, most maintainable code.
+This diagram by Rich Hickey, [from his talk *Effective Programs*][effective-programs], really gets to the point. The bottom levels of problems are generally solved by developers who are thinking about code. The top level of problems can't be solved by even the cleanest, fastest, most maintainable code.
 
 So much of our focus as developers is on what happens after the IDE is pulled up. Even when we describe senior developers as knowing what code *not* to write, it's frequently within the context of code instead of the context of understanding. 10x developers speedily create elegant code that solves the wrong problem due to not understanding what the business needs. They provide the exact same result as the developer who plods along creating tightly coupled, untestable code that doesn't solve business needs. The only difference is that it's faster and prettier to look at.
 
