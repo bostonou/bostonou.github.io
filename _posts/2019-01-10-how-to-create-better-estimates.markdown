@@ -54,5 +54,8 @@ If the business is trying to plan a major initiative for the next six months, it
 <br />
 If we take the time to systematically work through estimates, we can provide more than just time estimates built on rules like "add X% to every estimate". We can give stakeholders what they really need: insight into the time, costs, and risks, along with a better understanding of how reliable those insights are.
 
+*Thanks to [Tim Pote][pote] for reading a rough draft and providing good feedback.*
+
 [estimate]: /blog/estimates-are-about-communication.html
 [wash]: /blog/wash-your-hands.html
+[pote]: https://twitter.com/potetm
