@@ -10,7 +10,7 @@ tags: estimates design hiring-career
 
 ### How to think about estimates
 
-**An estimate is simply a design communicated.** The confidence and accuracy of our estimates are fully dependant on the accuracy and completeness of our designs.
+**An estimate is simply a design communicated.** The confidence and accuracy of our estimates are fully dependent on the accuracy and completeness of our designs.
 
 If you let me create a fully complete design, i.e. the actual software, I can give you a estimate with almost 100% confidence and accuracy. I simply create the software, and then tell you how long it took. The only thing I can't guarantee is that I've recognized all of the relevant risks to the business. The further I get away from creating the software, the lower my confidence and accuracy.
 
@@ -26,7 +26,7 @@ Our goal is to help provide the information people need. It's our job to underst
 
 #### 2. Work as if you're building the software
 
-Do the [initial design work][wash] as if you were going to build the software. Do not start with guessing how long everything will take. Estimates have become synonomous with "time estimates", but remember that we're trying to communicate more than just time and cost.
+Do the [initial design work][wash] as if you were going to build the software. Do not start with guessing how long everything will take. Estimates have become synonymous with "time estimates", but remember that we're trying to communicate more than just time and cost.
 
 So go through the full design work, including the code/architectural designs and alternatives. Timebox the work by the constraints given in step 1.
 
