@@ -15,7 +15,7 @@ Estimates provide the following:
 
 One key thing is that estimates are for communication *in both directions*. For too long, I treated estimates as managers simply telling me what to do and me explaining how long it would take.
 
-One of my favorite business books is [*The Advantage* by Patrick Lencioni][advantage]. He says that the vast majority of businesses have more than enough good information to succeed. They fail because they do not have a culture that encourages or allows the flee flow of that information (what he calls Organizational Health).
+One of my favorite business books is [*The Advantage* by Patrick Lencioni][advantage]. He says that the vast majority of businesses have more than enough good information to succeed. They fail because they do not have a culture that encourages or allows the free flow of that information (what he calls Organizational Health).
 
 Estimates are one way to free up the flow of information. When clients and managers ask us for estimates, it's our job to figure out what they really need:
 
